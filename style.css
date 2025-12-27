@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0c2b;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background: #1a1a4d;
+}
+
+.packs {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pack {
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.pack:hover {
+    transform: scale(1.1);
+}
+
+.pack img {
+    width: 150px;
+}
+
+#animation, #player-card {
+    margin-top: 50px;
+}
