@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>FIFA Pack Simulator</title>
-  <style>
-    body { font-family: Arial; text-align: center; margin-top: 50px; }
-    button { font-size: 20px; padding: 10px 20px; }
-    #pack { margin-top: 20px; font-size: 24px; color: green; }
-  </style>
+    <meta charset="UTF-8">
+    <title>FIFA Pack Simulator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Симулятор открытия паков FIFA</h1>
-  <button onclick="openPack()">Открыть пакет</button>
-  <div id="pack"></div>
+    <header>
+        <h1>FIFA Pack Simulator</h1>
+        <p>Добро пожаловать! Открой бесплатный бронзовый пак или покупай за монеты!</p>
+    </header>
 
-  <script>
-    const players = ["Messi", "Ronaldo", "Mbappe", "Neuer", "Modric", "Lewandowski"];
-    function openPack() {
-      const randomPlayer = players[Math.floor(Math.random() * players.length)];
-      document.getElementById("pack").innerText = "Ты получил: " + randomPlayer + "!";
-    }
-  </script>
+    <main>
+        <div class="packs">
+            <div class="pack" id="bronze-pack" onclick="openPack('bronze')">
+                <img src="images/bronze-pack.png" alt="Бронзовый пак">
+                <p>Бесплатно</p>
+            </div>
+            <!-- Можно добавить платные пакеты -->
+        </div>
+
+        <div id="animation"></div>
+        <div id="player-card"></div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
