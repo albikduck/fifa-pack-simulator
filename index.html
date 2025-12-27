@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>FIFA Pack Simulator</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    button { font-size: 20px; padding: 10px 20px; }
+    #pack { margin-top: 20px; font-size: 24px; color: green; }
+  </style>
+</head>
+<body>
+  <h1>Симулятор открытия паков FIFA</h1>
+  <button onclick="openPack()">Открыть пакет</button>
+  <div id="pack"></div>
+
+  <script>
+    const players = ["Messi", "Ronaldo", "Mbappe", "Neuer", "Modric", "Lewandowski"];
+    function openPack() {
+      const randomPlayer = players[Math.floor(Math.random() * players.length)];
+      document.getElementById("pack").innerText = "Ты получил: " + randomPlayer + "!";
+    }
+  </script>
+</body>
+</html>
